@@ -4,64 +4,76 @@ body{
   position: relative;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 100v;
   height: 100%;
+  background-attachment: fixed;
 
 }
 /* header section */
 
 .navbar {
-      position: absolute;
+      position: fixed;
       top:0;
-      background-color: #E76161;
+      background-color: #FFFBF5;
+      opacity: .6;
       overflow: hidden;
       width: 100%;
+      height: 4rem;
       display: flex;
       justify-content: space-around;
-      padding: 10px;
+      padding: 1rem;
+      z-index: 30;
+      color: #000;
     }
+  .navbar:hover {
+    opacity: .9;
+  }
 
     .Links{
-      margin-top: 10px;
-      margin-right: 70px;
-      position: relative;
-
-      left: 0;
-      float: right;
+      margin:auto;
+      position: absolute;
+      display: flex;
+      right: 0;
+      width: 30%;
+      margin-bottom: .5rem;
     }
 
     /* CSS for the navigation bar links */
     .navbar a {
-
-      color: white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: bolder;
+      margin-top:1vh;
+    padding:3% 3% 3% 3%;
+    text-decoration:none;
+    color:rgb(15, 2, 2);
+    font-family:'Lobster Two';
+    font-size:1.5vw;
+    box-shadow:10px 15px 50px black;
 
     }
 
      .navbar a:hover{
-       cursor: pointer;
-       color:#0C134F;
-       border-radius: 10px;
+      background-color:#1d9550;
+    box-shadow:none;
      }
     /* CSS for the search bar */
 
 
     .search-bar {
-      background-color: white;
-        margin: 10px;
+      position: absolute;
+      background-color:#1d9550;
+        margin:1rem auto ;
       display: flex;
       border: none;
       font-size: 14px;
       border-radius: 30px;
       overflow: hidden;
       height: 40px;
+      color:white;
+      opacity:1;
+      width: 20%;
     }
+   
     .search-icon{
-     background-color: rgba(255, 0, 0, 0.1);
+      background-color:#1d9550;
       overflow: hidden;
       margin-right: 0;
       text-align: center;
@@ -69,7 +81,7 @@ body{
 
     }
     .fa-search {
-      color:black;
+      color:white;
   font-size: 22px;
   font-weight: bolder;
   width:30px;
@@ -88,34 +100,28 @@ body{
     }
 
     .search-bar input{
-      width:260px;
+      width:100%;
       height: 42px;
       padding: 8px;
-      background-color: rgba(255, 0, 0, 0.1);
+      background-color:#C9D6DF;
       font-weight: bold;
       border: none;
+      color: black;
 
     }
-    .search-bar button {
-      padding: 6px 10px;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      font-size: 14px;
-      cursor: pointer;
-    }
+    
 
     /* CSS for the logos */
     .logos {
-      float: left;
-      margin-left: 40px;
-      /* background-color: white; */
+      position:absolute;
+      left:5rem;
+      width: 15%;
+      height: 70%;
     }
 
     .logos img {
-      width: 140px;
-      height: 50px;
-
+      width: 100%;
+      height: 100%;
     }
 
 
@@ -128,12 +134,12 @@ body{
 .image-slider{
 
   border-radius: 10px;
-  width:80%;
-  height: 400px;
+  width:100vw;
+  height: 40rem;
   position:relative;
-  top:8rem;
-  left:11.5%;
-
+  padding-top: 2rem;
+  display: flex;
+  overflow: hidden;
 
 }
 
@@ -141,17 +147,11 @@ body{
   border-radius: 20px;
   width:100%;
   height:100%;
-  position: absolute;
-  clip-path:circle(0.1 at 0 50%);
-  top:0;
+  margin-right:-100%;
 }
 .Active{
-    z-index: 1;
-    clip-path:circle(150% at 0 50%);
-      transition: 2s;
-    transition-property: clip-path;
-
-
+    
+    /* margin-right:0; */
 }
 
 .image{
@@ -296,6 +296,7 @@ footer {
 left: 0;
 bottom: -20rem;
 width: 100%;
+overflow: hidden;
 background-color: #E76161;
 height: 5rem;
 text-align: center;
@@ -324,3 +325,97 @@ padding: 1rem;
   display: block;
   padding: 0.5rem;
 }
+
+
+/* css for phonespage */
+.card-Container a{
+  text-decoration: none;
+  padding: 0;
+  
+}
+.card-Container a p{
+   color: #000;
+}
+.phonepage{
+  position: relative;
+   top:8rem;
+   padding: 1rem 10rem;
+}
+.phonepage h1{
+  font-size: 2.5rem;
+  padding-left: 1rem;
+}
+.product-card {
+  
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  width: 15rem;
+  height: 24rem;
+  display: inline-block;
+}
+
+
+.imgBox{
+    width: 100%;
+    height: 85%;
+    border:  solid 2px #E76161;
+    border-radius: 4px;
+}
+
+.imgBox img{
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.textBox{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10%;
+  padding: 1px;
+
+}
+.textBox h3{
+   
+}
+.textBox p{
+  padding-top: 3px;
+  font-weight: bolder;
+
+}
+
+
+/* css for detail page */
+#productDetail{
+  width: 100v;
+  display: flex;
+  padding: 0 15%;
+  
+}
+
+
+#proImage{
+  margin-right: 6rem;
+  border-radius: 8px;
+  border:solid 2px #E76161;
+  height: 30rem;
+}
+#proImage img{
+  width:20rem;
+  height: 30rem;
+  border-radius: 8px;
+  object-fit: fill;
+
+}
+
+#proDetailText{
+  
+  width: 50%;
+  height: 30rem;
+}
+#proDetailText pre{
+  font-size: larger;
+}
+
