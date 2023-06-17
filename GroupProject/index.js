@@ -47,17 +47,38 @@ var slides=document.querySelectorAll(".slider");
 var dotBtn=document.querySelectorAll(".dot");
 var currIndex=0;
 
+
+// var $slides = $('.slider');
+// var $slide = $('.slide1');
+// var count = 1;
+
+// console.log($slides)
+
+
+//     setInterval(function () {
+
+//         $slides.animate({ 'margin-left': '-=68vw' }, 1200, function () {
+
+//             count++;
+//             if (count === 3) {
+//                 $slides.css("margin-left", 0);
+//                 count = 1;
+//             }
+
+//         });
+//     }, 4000);
+
 // manual sliding
 
 var slideShow=function(index){
-// slides.forEach((item, i) => {
-//  item.classList.remove("Active");
-// });
-// dotBtn.forEach((item, i) => {
-//  item.classList.remove("ActiveBtn");
-// });
+slides.forEach((item, i) => {
+ item.classList.remove("Active");
+});
+dotBtn.forEach((item, i) => {
+ item.classList.remove("ActiveBtn");
+});
 
-var $slides=$(".slider");
+// var $slides=$(".slider");
 // $slides.animate({ 'margin-left': '-=68vw' }, 1200, function () {
 
 //   count++;
@@ -68,17 +89,17 @@ var $slides=$(".slider");
 
 // });
 
-$slides.animate({ 'margin-left': "-=68vw" }, 1200, function () {
+// $slides.animate({ 'margin-left': "-=68vw" }, 1200, function () {
 
-  count++;
-  if (count === 4) {
-      $slides.css("margin-left",0);
-      count = 1;
-  }
+//   count++;
+//   if (count === 4) {
+//       $slides.css("margin-left",0);
+//       count = 1;
+//   }
 
-});
-// slides[index].classList.add("Active");
-// dotBtn[index].classList.add("ActiveBtn");
+// });
+slides[index].classList.add("Active");
+dotBtn[index].classList.add("ActiveBtn");
 }
 
 dotBtn.forEach((dot, i) => {
@@ -105,7 +126,7 @@ var repeater=()=>{
        return;
      }
      repeater();
-  },5000) ;
+  },3000) ;
 }
 repeater();
 }
